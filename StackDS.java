@@ -3,6 +3,7 @@ public class StackDS{
     int arr[] = new int[max]; // stack operation perform on this array
     int top=-1; // stack Top pointer
 
+<<<<<<< HEAD
     public int push(int val)
     {
         if(arr.length()==max)
@@ -29,5 +30,25 @@ public class StackDS{
         }
     }
 
+=======
+    public void pop(){ 
+        if(!isEmpty()) // check if stack is empty then it's underflow
+        {
+            System.out.println("Stack is underflow");
+        }
+        else{// else stack has elements 
+            System.out.println(arr[top]+" is pop out from the stack");
+            top = top - 1;
+        }
+    }
+    public boolean isEmpty(){
+        if(top < 0){ // check if top is less then 0 then stack is empty
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+>>>>>>> c3f0a9c76bcefc564496c313c73429dd8d7cf2a5
 
 }
