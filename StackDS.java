@@ -3,10 +3,9 @@ public class StackDS{
     int arr[] = new int[max]; // stack operation perform on this array
     int top=-1; // stack Top pointer
 
-<<<<<<< HEAD
     public int push(int val)
     {
-        if(arr.length()==max)
+        if(top==max)
         {
             return -1;
         }
@@ -20,7 +19,7 @@ public class StackDS{
 
     public int peek()
     {
-        if(top == -1)
+        if(isEmpty())
         {
             return -1;
         }
@@ -29,10 +28,8 @@ public class StackDS{
             return arr[top];
         }
     }
-
-=======
     public void pop(){ 
-        if(!isEmpty()) // check if stack is empty then it's underflow
+        if(isEmpty()) // check if stack is empty then it's underflow
         {
             System.out.println("Stack is underflow");
         }
@@ -43,12 +40,13 @@ public class StackDS{
     }
     public boolean isEmpty(){
         if(top < 0){ // check if top is less then 0 then stack is empty
-            return false;
-        }
-        else{
+            System.out.println("Stack is Empty");
             return true;
         }
+        else{
+            System.out.println("Stack contains Values");
+            return false;
+        }
     }
->>>>>>> c3f0a9c76bcefc564496c313c73429dd8d7cf2a5
 
 }
