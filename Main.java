@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
         //Call static methods to pass the values
-        StackDS obj = new StackDS();
-        Scanner sc= new Scanner(System.in);
+        Stack stack = new Stack();
+        Scanner takeinput= new Scanner(System.in);
         int value=0;
         int ans=0;
         int operation=0;
@@ -19,14 +19,14 @@ public class Main{
         System.out.println("Enter 5 for Exit");
         System.out.println("****************************************************");
         System.out.println("Please enter the operation you want to perform");
-        operation= sc.nextInt();
+        operation= takeinput.nextInt();
 
         switch(operation)
         {
             case 1: //for push
                 System.out.println("Please enter number:");
-                value = sc.nextInt();
-                ans = obj.push(value);
+                value = takeinput.nextInt();
+                ans = stack.push(value);
                 if(ans == -1)
                 {
                     System.out.println("Stack overflowed");
@@ -37,10 +37,10 @@ public class Main{
                 }
                 break;
             case 2: //for pop
-                obj.pop();
+                stack.pop();
                 break;
             case 3: //for peek
-                ans = obj.peek();
+                ans = stack.peek();
                 if(ans == -1)
                 {
                     System.out.println("Stack empty!! Please enter value");
@@ -51,7 +51,7 @@ public class Main{
                 }
                 break;
             case 4: //for is empty
-                obj.isEmpty();
+                stack.isEmpty();
                 break;
             case 5:
                 System.out.println("Thank you for using Stack program.");

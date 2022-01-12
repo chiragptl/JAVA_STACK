@@ -1,17 +1,17 @@
-public class StackDS{
-    static final int max = 100; // length of the stack
-    int arr[] = new int[max]; // stack operation perform on this array
+public class Stack{
+    static final int StackLength = 100; // length of the stack
+    int StackValue[] = new int[StackLength]; // stack operation perform on this array
     int top=-1; // stack Top pointer
 
     public int push(int val)
     {
-        if(top==max)
+        if(top==StackLength)
         {
             return -1;
         }
         else
         {
-            arr[top+1]=val;
+            StackValue[top+1]=val;
             top++;
             return 1;
         }
@@ -25,7 +25,7 @@ public class StackDS{
         }
         else
         {
-            return arr[top];
+            return StackValue[top];
         }
     }
     public void pop(){ 
@@ -34,7 +34,7 @@ public class StackDS{
             System.out.println("Stack is underflow");
         }
         else{// else stack has elements 
-            System.out.println(arr[top]+" is pop out from the stack");
+            System.out.println(StackValue[top]+" is pop out from the stack");
             top = top - 1;
         }
     }
